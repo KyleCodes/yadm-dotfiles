@@ -112,7 +112,6 @@ bindkey "\ef" forward-word          # Option + Right
 bindkey "\e[H" beginning-of-line    # Cmd + Left
 bindkey "\e[F" end-of-line         # Cmd + Right
 
-
 # history setup
 HISTFILE=$HOME/.zhistory
 HISTSIZE=50000
@@ -122,15 +121,25 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-# enable auto suggestions as you type
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# enable auto suggestions as you type, and show syntax highlighting
+if [[ "$(uname)" == "Darwin" ]]; then
+    # macOS specific configurations
+    # echo "Running macOS configurations"
+    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+elif [[ "$(uname)" == "Linux" ]]; then
+    # Check if it's specifically Ubuntu
+    if grep -q Ubuntu /etc/os-release; then
+        # echo "Running Ubuntu configurations"
+        source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+        source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    fi
+fi
 
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
-
-# visual feedback of whether commands are spelled correctly
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Zoxide (better cd) -- shortcut to frequently accessed directories
 eval "$(zoxide init zsh)"
