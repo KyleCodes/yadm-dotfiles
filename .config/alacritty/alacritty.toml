@@ -1,0 +1,37 @@
+
+[env]
+TERM = "alacritty"    # Ensure TERM is set to 'alacritty' for full compatibility with Alacritty
+enable_osc52 = "true"
+
+option_as_alt = "Both"
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001bb" # Option + Left
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001bf" # Option + Right
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = "\u001b[H" # Cmd + Left
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = "\u001b[F" # Cmd + Right
+
+[font]
+normal.family = "Hack Nerd Font Mono"
+
+[general]
+
+# Theme
+import = [
+  "~/.config/alacritty/themes/dracula/dracula.toml",
+  # "~/.config/alacritty/themes/tokyo-night-alacritty-theme/tokyo-night.toml"
+]
