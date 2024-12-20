@@ -1,6 +1,6 @@
 
 [env]
-TERM = "alacritty"    # Ensure TERM is set to 'alacritty' for full compatibility with Alacritty
+# TERM = "alacritty"    # Ensure TERM is set to 'alacritty' for full compatibility with Alacritty
 enable_osc52 = "true"
 
 option_as_alt = "Both"

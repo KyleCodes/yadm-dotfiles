@@ -3,3 +3,9 @@
 [user]
 	email = kylemuldoon15@gmail.com
 	name = Kyle Muldoon
+[alias]
+  co = checkout
+  st = status
+  br = branch
+  ci = commit
+  lg = log --format='%C(yellow)%h%C(reset) -- %C(blue)%an%C(reset) -- %s'
