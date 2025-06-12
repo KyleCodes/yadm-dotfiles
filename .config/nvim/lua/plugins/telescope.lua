@@ -34,6 +34,10 @@ return {
             "--exclude",
             ".git", -- Explicitly exclude .git
             "--exclude",
+            ".webpack", -- Explicitly exclude .git
+            "--exclude",
+            ".serverless", -- Explicitly exclude .git
+            "--exclude",
             "node_modules", -- Explicitly exclude node_modules
             "--exclude",
             "**/dist/**", -- Exclude dist directories at any depth
@@ -53,6 +57,10 @@ return {
               "!.git/*", -- Exclude .git directory
               "--glob",
               "!node_modules/*", -- Exclude node_modules directory
+              "--glob",
+              "!.webpack/*",
+              "--glob",
+              "!.serverless/*",
               "--glob",
               "!**/dist/**", -- Exclude dist directories at any depth
               "--glob",

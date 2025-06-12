@@ -33,5 +33,6 @@ normal.family = "Hack Nerd Font Mono"
 # Theme
 import = [
   "~/.config/alacritty/themes/dracula/dracula.toml",
-  # "~/.config/alacritty/themes/tokyo-night-alacritty-theme/tokyo-night.toml"
+  # "~/.config/alacritty/themes/tokyo-night-alacritty-theme/tokyo-night-day.toml",
+  # "~/.config/alacritty/themes/tokyo-night-alacritty-theme/tokyo-night-storm.toml",
 ]

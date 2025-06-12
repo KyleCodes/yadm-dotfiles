@@ -8,4 +8,4 @@
   st = status
   br = branch
   ci = commit
-  lg = log --format='%C(yellow)%h%C(reset) -- %C(blue)%an%C(reset) -- %s'
+  lg = log --format='%C(yellow)%h%C(reset) -- %C(green)%ad%C(reset) -- %C(blue)%an%C(reset) -- %s' --date=format:'%Y-%m-%d' --date-order
